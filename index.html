@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HangulGo 🇰🇷</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <h1>HangulGo <span class="flag">🇰🇷</span></h1>
+      <p class="tagline">Essential Korean for your trip</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Category Tabs -->
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-category="all">All</button>
+      <button class="tab" data-category="greetings">Greetings</button>
+      <button class="tab" data-category="food">Food</button>
+      <button class="tab" data-category="transport">Transport</button>
+      <button class="tab" data-category="shopping">Shopping</button>
+      <button class="tab" data-category="numbers">Numbers</button>
+      <button class="tab" data-category="emergency">Emergency</button>
+    </div>
+
+    <!-- Progress Counter -->
+    <div class="progress">
+      <span id="counter">1 / 1</span>
+      <span class="progress-label" id="category-label">All Cards</span>
+    </div>
+
+    <!-- Flashcard -->
+    <div class="card-scene">
+      <div class="card" id="card">
+        <div class="card-inner">
+
+          <!-- Front: Korean -->
+          <div class="card-front">
+            <span class="card-hint">tap to reveal</span>
+            <div class="card-content">
+              <p class="korean" id="korean-text">안녕하세요</p>
+              <p class="romanization" id="roman-text">Annyeonghaseyo</p>
+            </div>
+            <span class="card-category-badge" id="front-badge">Greetings</span>
+          </div>
+
+          <!-- Back: English only -->
+          <div class="card-back">
+            <span class="card-hint">tap to flip back</span>
+            <div class="card-content">
+              <p class="english" id="english-text">Hello</p>
+            </div>
+            <span class="card-category-badge back-badge" id="back-badge">Greetings</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Right / Wrong Buttons (shown only after flipping) -->
+    <div class="answer-buttons hidden" id="answer-buttons">
+      <button class="btn btn-wrong" id="wrong-btn">✗ Missed it</button>
+      <button class="btn btn-right" id="right-btn">✓ Got it!</button>
+    </div>
+
+    <!-- Score Tracker -->
+    <div class="score-bar" id="score-bar">
+      <span class="score-correct">✓ <span id="score-correct">0</span></span>
+      <span class="score-divider">·</span>
+      <span class="score-wrong">✗ <span id="score-wrong">0</span></span>
+      <button class="score-reset" id="score-reset">Reset</button>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="controls">
+      <button class="btn btn-secondary" id="prev-btn">← Prev</button>
+      <button class="btn btn-accent" id="shuffle-btn">⇄ Shuffle</button>
+      <button class="btn btn-secondary" id="next-btn">Next →</button>
+    </div>
+
+    <!-- Tip -->
+    <p class="tip">Tip: Korean reads top to bottom, left to right — just like English!</p>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
